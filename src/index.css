@@ -74,3 +74,6 @@ App Home
 .value {
   text-align: right;
 }
+#buttonBar button {
+  margin-left: 20px;
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import Table from "react-bootstrap/Table";
+import { Link } from "react-router-dom";
 import { formatNumber } from "../../helpers/formatHelpers";
 
 export default function CategorySumary(props) {

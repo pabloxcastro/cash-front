@@ -95,8 +95,8 @@ export default function App() {
         </div>
 
         <div id="headerTransaction" className="flex-row">
-          <Link to={"/add"} className="nav-link">
-            Nova Transação
+          <Link className="btn btn-dark" to={"/add"}>
+            +
           </Link>
         </div>
 

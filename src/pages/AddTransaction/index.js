@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import transactionService from "../../services/TransactionService";
 
 export default function AddTransaction() {
@@ -58,9 +59,14 @@ export default function AddTransaction() {
       {submitted ? (
         <div>
           <h4>You submitted successfully!</h4>
-          <button className="btn btn-success" onClick={newTransaction}>
-            Add
-          </button>
+          <div id="headerTransaction" className="flex-row">
+            <button className="btn btn-dark" onClick={newTransaction}>
+              Add
+            </button>
+            <Link to={"/"} className="btn btn-dark">
+              Voltar
+            </Link>
+          </div>
         </div>
       ) : (
         <div>
@@ -131,9 +137,14 @@ export default function AddTransaction() {
               name="value"
             />
           </div>
-          <button onClick={saveTransaction} className="btn btn-success">
-            Submit
-          </button>
+          <div id="buttonBar">
+            <Link to={"/"} className="btn btn-dark">
+              Cancelar
+            </Link>
+            <button onClick={saveTransaction} className="btn btn-dark">
+              Submit
+            </button>
+          </div>
         </div>
       )}
     </div>
