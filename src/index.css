@@ -42,43 +42,35 @@ label {
   text-align: right;
 }
 
-.status {
-  margin-left: 160px;
-}
-
-#statusContainer {
-  border-bottom: 3px solid greenyellow;
-}
-
 .period {
   margin: 0 auto;
   width: 150px;
 }
 
+/*
+App Home
+*/
 #headerTransaction {
   border-bottom: 3px solid greenyellow;
 }
 
-#filter {
+#mes-select {
   background-color: black;
-  border: none;
-  margin-left: 20px;
-  width: 400px;
-}
-
-#filtro:hover {
-  border: 1px solid;
+  color: rgb(255, 216, 19);
 }
 
 .table {
   color: rgb(255, 216, 19);
 }
 
-tr {
+.categoryHome {
   border-bottom: 3px solid rgb(255, 76, 19);
 }
 
-#mes-select {
-  background-color: black;
-  color: rgb(255, 216, 19);
+.statusHome {
+  border-bottom: 3px solid greenyellow;
+}
+
+.value {
+  text-align: right;
 }

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import transactionService from "../../services/TransactionService";
 
-const AddTransaction = () => {
+export default function AddTransaction() {
   const initialTransactionState = {
     id: null,
     description: "",
@@ -138,6 +138,4 @@ const AddTransaction = () => {
       )}
     </div>
   );
-};
-
-export default AddTransaction;
+}
