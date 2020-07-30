@@ -1,6 +1,5 @@
 import React from "react";
-import Table from "react-bootstrap/Table";
-import { Link } from "react-router-dom";
+import { Container, Category, Balance } from "./styles";
 import { formatNumber } from "../../helpers/formatHelpers";
 
 export default function CategorySumary(props) {
@@ -8,26 +7,26 @@ export default function CategorySumary(props) {
 
   return (
     <>
-      <Table id="categoryHome" className="table" borderless>
+      <Container>
         <tbody>
           {categories &&
             categories.map((category, index) => (
-              <tr key={index} className="categoryHome">
+              <Category key={index}>
                 <td>{category._id}</td>
                 <td className="value">R$</td>
                 <td className="value">{formatNumber(category.soma)}</td>
-              </tr>
+              </Category>
             ))}
           {balance &&
             balance.map((balance, index) => (
-              <tr key={index} className="statusHome">
+              <Balance key={index}>
                 <td>{balance.description}</td>
                 <td className="value">R$</td>
                 <td className="value">{formatNumber(balance.value)}</td>
-              </tr>
+              </Balance>
             ))}
         </tbody>
-      </Table>
+      </Container>
     </>
   );
 }

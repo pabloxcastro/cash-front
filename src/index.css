@@ -32,19 +32,9 @@ label {
   padding: 10px;
 }
 
-#header-app {
-  width: 50%;
-  text-align: left;
-}
-
 #header-mes {
   width: 50%;
   text-align: right;
-}
-
-.period {
-  margin: 0 auto;
-  width: 150px;
 }
 
 /*

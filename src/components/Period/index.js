@@ -1,5 +1,5 @@
 import React from "react";
-import Form from "react-bootstrap/Form";
+import { Container, Select } from "./styles";
 
 function period(props) {
   const { periods, onChangePeriod } = props;
@@ -10,14 +10,8 @@ function period(props) {
   };
 
   return (
-    <div className="period">
-      <Form.Control
-        onChange={handleSelectChange}
-        as="select"
-        className="mr-sm-2"
-        id="mes-select"
-        custom
-      >
+    <Container>
+      <Select onChange={handleSelectChange}>
         {periods.map((period, index) => {
           return (
             <option key={index} value={period}>
@@ -25,8 +19,8 @@ function period(props) {
             </option>
           );
         })}
-      </Form.Control>
-    </div>
+      </Select>
+    </Container>
   );
 }
 

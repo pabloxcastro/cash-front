@@ -1,13 +1,11 @@
 import React from "react";
-import { BrowserRouter as Link } from "react-router-dom";
-import Table from "react-bootstrap/Table";
 
 export default function Transactions(props) {
   const { transactions } = props;
 
   return (
     <>
-      <Table className="table" borderless>
+      <table className="table">
         <tbody>
           {transactions &&
             transactions.map((transaction, index) => (
@@ -27,7 +25,7 @@ export default function Transactions(props) {
               </tr>
             ))}
         </tbody>
-      </Table>
+      </table>
     </>
   );
 }

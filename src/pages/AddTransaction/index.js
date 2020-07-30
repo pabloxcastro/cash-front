@@ -60,17 +60,13 @@ export default function AddTransaction() {
         <div>
           <h4>You submitted successfully!</h4>
           <div id="headerTransaction" className="flex-row">
-            <button className="btn btn-dark" onClick={newTransaction}>
-              Add
-            </button>
-            <Link to={"/"} className="btn btn-dark">
-              Voltar
-            </Link>
+            <button onClick={newTransaction}>Add</button>
+            <Link to={"/"}>Voltar</Link>
           </div>
         </div>
       ) : (
         <div>
-          <div className="form-group">
+          <div>
             <input
               type="radio"
               id="receita"
@@ -88,7 +84,7 @@ export default function AddTransaction() {
             />
             <label htmlFor="despesa">Despesa</label>
           </div>
-          <div className="form-group">
+          <div>
             <label htmlFor="yearMonthDay">Data</label>
             <input
               type="text"

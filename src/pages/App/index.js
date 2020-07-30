@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { Header } from "./styles";
 
-import Header from "../../components/header/Header";
-import Period from "../../components/period/Period";
+import Title from "../../components/Title";
+import Period from "../../components/Period";
 import transactionService from "../../services/TransactionService";
-import CategorySumary from "../../components/categories/CategorySumary";
+import CategorySumary from "../../components/CategorySumary";
 
 export default function App() {
   const [periods, setPeriod] = useState([]);
@@ -88,11 +89,11 @@ export default function App() {
 
   return (
     <>
-      <div className="container">
-        <div className="flex-row">
-          <Header />
+      <div>
+        <Header>
+          <Title />
           <Period onChangePeriod={handleChangePeriod} periods={periods} />
-        </div>
+        </Header>
 
         <div id="headerTransaction" className="flex-row">
           <Link className="btn btn-dark" to={"/add"}>
