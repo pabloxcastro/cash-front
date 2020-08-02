@@ -26,7 +26,7 @@ export default createGlobalStyle`
   }
 
   h3 {
-    color: greenyellow;
+    color: yellow;
   }
 
   label {

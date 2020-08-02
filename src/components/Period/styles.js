@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  margin: 0 auto;
-  width: 500px;
-  text-align: right;
+  text-align: left;
+  margin-right: 80%;
 `;
 
 export const Select = styled.select`

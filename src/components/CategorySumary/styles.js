@@ -19,3 +19,16 @@ export const Balance = styled.tr`
   height: 45px;
   margin: 5px;
 `;
+
+export const CurrentCategory = styled.tr`
+  border-bottom: 3px solid rgb(255, 76, 19);
+`;
+
+export const TitleCategory = styled.h4`
+  margin: 10px 0px 10px 0px;
+  color: yellowgreen;
+`;
+
+export const Value = styled.td`
+  text-align: right;
+`;

@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Header } from "./styles";
 
-import Title from "../../components/Title";
 import Period from "../../components/Period";
 import transactionService from "../../services/TransactionService";
 import CategorySumary from "../../components/CategorySumary";
+import { Header } from "./styles";
 
 export default function App() {
   const [periods, setPeriod] = useState([]);
-  const [currentPeriod, setCurrentPeriod] = useState("2019-05");
+  const [currentPeriod, setCurrentPeriod] = useState("2019-01");
   const [categorySumary, setCategorySumary] = useState([]);
   const [transactions, setTransactions] = useState([]);
   const [balance, setBalance] = useState([]);
@@ -91,17 +90,18 @@ export default function App() {
     <>
       <div>
         <Header>
-          <Title />
           <Period onChangePeriod={handleChangePeriod} periods={periods} />
-        </Header>
 
-        <div id="headerTransaction" className="flex-row">
           <Link className="btn btn-dark" to={"/add"}>
             +
           </Link>
-        </div>
+        </Header>
 
-        <CategorySumary categories={categorySumary} balance={balance} />
+        <CategorySumary
+          categories={categorySumary}
+          transactions={transactions}
+          balance={balance}
+        />
       </div>
     </>
   );
